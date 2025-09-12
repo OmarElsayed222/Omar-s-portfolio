@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Zone</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-16 at 20.20.44_6c630d15.jpg">
+    
+</head>
+<body>
+ 
+ <div class="header">
+  
+    <div id="clock-container">
+   <script class="clock" >
+        function updateClock() {
+            const clockContainer = document.getElementById('clock-container');
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString('en-US', {
+              hour: '2-digit',  
+              minute: '2-digit',   
+              second: '2-digit',  
+              hour12: false 
+            });
+            clockContainer.textContent = formattedTime;
+            clockContainer.style.color = 'white'; 
+          }
+          
+          
+          setInterval(updateClock, 1000);
+          
+         
+          updateClock();
+        
+        
+        
+            </script>
+</div>
+    <div>
+    <h1>Have A Nice Movie Night</h1>
+  </div>
+<div class="containr">
+    <input type="text" placeholder="Search" id="searchInput">
+    <button class="menu-btn" id="searchButton" onclick="searchAndRedirect()">Search</button>
+    
+</div>
+<div class="line"></div>
+<div class="butto">
+    <a href="Exercise.html" class="home">
+    Home   
+  </a>
+  <a href="mylist.html" class="top">
+      Top Viewed    
+  </a>
+  <div class="menu">
+    <button class="menu-btn">☰ Menu </button>
+    <div class="menu-content">
+        <a href="sci.html">Science Fiction</a>
+        <a href="crime.html">Crime</a>
+        <a href="horror.html">Horror</a>
+        <a href="drama.html">Drama</a>
+        <a href="comedypage.html">Comedy</a>
+    </div>
+</div>
+  </div>
+<div class="butto">
+
+
+</div>
+<div class="container">
+<input type="date" class="styled-date"> 
+</div> 
+
+
+</div>
+<div>
+    <main>
+    <h2> <u>All Movies </u></h2>
+        <table>
+        <div>
+        <tr><td><img src="photos/inter.jpg"
+             alt="Interstaller"
+             width="150px"></td>
+            <td> <p>Interstaller </p>
+                <p>Rating : 4.9</p>
+                <p>Science Fiction</p>
+               <div class="butto">
+                <button  onclick="window.location.href='page2.html'" class="home">Watch</button>
+            </div>
+            </td> 
+            
+        </tr>
+       
+    </div>
+        
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\endgame.jpg"
+                alt="EndGame"
+                width="150px"></td>
+               <td> <p>EndGame </p> 
+                <p>Rating : 4.7</p>
+                <p>Science Fiction</p>
+                <div class="butto">
+                    <button class="menu-btn" onclick="window.location.href='endgame.html'">Watch</button>
+                </div> 
+               </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\lacasa.jpg"
+                alt="La Casa De Papel"
+                width="150px"></td>
+               <td> <p>La Casa De Papel </p>
+                <p>Rating : 4.8</p>
+                <p>Crime</p>
+                
+                <div class="butto">
+                    <button class="menu-btn" onclick="window.location.href='la casa.html'">Watch</button>
+                </div> 
+     
+               
+               </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\jocer.jpg"
+                alt="Joker"
+                width="150px"></td>
+               <td> <p>Joker </p>
+                <p>Rating : 4.9</p>
+                <p>Drama</p>
+              <div class="butto">
+                <button class="home" onclick="window.location.href='joker.html'">Watch</button>
+            </div>
+               </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\jumanji.jpg"
+                alt="Jumanji"
+                width="150px"></td>
+               <td> <p>Jumanji </p>
+                <p>Rating : 4.0</p>
+                <p>Comedy</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-17 at 10.14.56_df2bea74.jpg"
+                alt="Megan"
+                width="150px"></td>
+               <td> <p>Megan </p>
+                <p>Rating : 4.5</p>
+                <p>Horror</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-17 at 10.16.36_1a2c80cd.jpg"
+                alt="Massion"
+                width="150px"></td>
+               <td> <p>Mission Impossibile </p>
+                <p>Rating : 4.3</p>
+                <p>Crime</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-17 at 10.17.44_f651ee86.jpg"
+                alt="The nun"
+                width="150px"></td>
+               <td> <p>The Nun </p>
+                <p>Rating : 4.4</p>
+                <p>Horror</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-17 at 10.20.32_05b1fc35.jpg"
+                alt="master ben"
+                width="150px"></td>
+               <td> <p>Man vs Bee </p>
+                <p>Rating : 4.6</p>
+                <p>Comedy</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+        <div>
+
+            <tr><td><img src="c:\Users\KimoStore\Desktop\WhatsApp Image 2024-12-17 at 10.18.29_96fa8f59.jpg"
+                alt="Wendsday"
+                width="150px"></td>
+               <td> <p>Wednsday </p>
+                <p>Rating : 4.8</p>
+                <p>Drama</p>
+                <div class="butto">
+                <button class="home" onclick="window.location.href='jumangi.html'">Watch</button>
+            </div>
+            </td> 
+           </tr>
+
+        </div>
+    </table>
+</div>
+</main>
+<script>
+function updateClock() {
+    const clockContainer = document.getElementById('clock-container');
+    const now = new Date();
+    const formattedTime = now.toLocaleTimeString('en-US', {
+      hour: '2-digit',  
+      minute: '2-digit',   
+      second: '2-digit',  
+      hour12: false 
+    });
+    clockContainer.textContent = formattedTime; 
+  }
+  
+  
+  setInterval(updateClock, 1000);
+  
+ 
+  updateClock();
+
+
+function searchAndRedirect() {
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+
+
+const moviePages = {
+    "interstaller": "page2.html",
+    "endgame": "endgame.html",
+    "la casa de papel": "la casa.html",
+    "joker": "joker.html",
+    "jumanji": "jumangi.html",
+    "megan": "megan.html",
+    "mission impossibile": "mission.html",
+    "the nun": "nun.html",
+    "man vs bee": "manvsbee.html",
+    "wednesday": "wednesday.html"
+};
+
+if (moviePages[searchInput]) {
+    window.location.href = moviePages[searchInput];
+} else {
+    alert("Movie not found. Please try again!");
+}
+
+}
+</script>
+<div><footer class="footer">
+
+    
+<p>&#169 Copy Right</p>
+<p >Lorem ipsum dolor sit amet consectetur adipisicin
+    g elit. Hic modi facilis velit i
+    nventore animi ad id accusamus! Quisquam, 
+    tenetur vitae unde perspiciatis odio, saepe 
+    vero qui eos architecto, aliquam ipsum
+     totam expedita harum modi cupiditate ullam 
+     nostrum nisi. Illum illo asperiores inventore 
+     a tempora soluta. Est explicabo asperiores rem 
+     nisi, repellendus a, eaque fugit ipsum dolore quod 
+     alias aliquid? Necessitatibus sapiente neque 
+     aspernatur quis quidem maxime adipisci ducimus optio repudiandae cupiditate aliquid, praesentium qui nostrum nemo! A, omnis excepturi? Deserunt iste soluta velit placeat dolorem numquam ab quis, commodi, minima hic facere aut mol
+    litia tempora ipsam, labore officia repudiandae? Aliquam.
+</p>
+</footer>
+</div>
+</body>
+</html>

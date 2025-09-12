@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saiko Restaurant Offers</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    line-height: 1.6;
+    background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=80") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+
+  header {
+    background: rgba(17,17,17,0.9);
+    color: #fff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+  }
+  nav a:hover {
+    color: #d94907;
+  }
+
+  section.offers {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #e76f51;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #2a9d8f;
+  }
+
+  h2.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #030303;
+  }
+
+  .offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .offer-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+
+  .offer-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .offer-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .offer-info h3 {
+    color: #2a9d8f;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .offer-info p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .offer-info span {
+    font-weight: bold;
+    color: #e76f51;
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    background: rgba(17,17,17,0.9);
+    color: #eee;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .offers-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .offer-add-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 10px;
+  background: #e76f51;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-add-btn:hover {
+  background: #2a9d8f;
+  transform: scale(1.05);
+}
+
+.offer-add-btn:active {
+  background: #c74d2e;
+  transform: scale(0.95);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Saiko Restaurant</h1>
+  <nav>
+    <a href="index.html">Menu</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="offers" id="offers">
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Menu</a>
+  </div>
+
+  <h2 class="section-title">Special Offers</h2>
+
+  <div class="offers-grid">
+    <div class="offer-card">
+      <img src="C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-481539808-612x612 (1).jpg" alt="Offer 1">
+      <div class="offer-info">
+        <h3>Combo Burger + Drink</h3>
+        <p>Get a juicy burger with a soft drink for a special price.</p>
+        <span>$10</span>
+        <button class="offer-add-btn" onclick="addToOrder('Combo Burger + Drink ', 10)">Add to Order</button>
+
+      </div>
+    </div>
+
+    <div class="offer-card">
+      <img src = "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-1434485894-612x612.jpg" alt="Offer 2">
+      <div class="offer-info">
+        <h3>Pizza Feast</h3>
+        <p>Two medium pizzas with extra toppings at a discounted price.</p>
+        <span>$20</span>
+        <button class="offer-add-btn" onclick="addToOrder('Pizza Feast ', 20)">Add to Order</button>
+
+      </div>
+    </div>
+
+    <div class="offer-card">
+      <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-1176435194-612x612.jpg" alt="Offer 3">
+      <div class="offer-info">
+        <h3>Dessert Delight</h3>
+        <p>Buy 2 desserts and get 1 free for the sweetest experience.</p>
+        <span>$8</span>
+    <button class="offer-add-btn" onclick="addToOrder('Dessert Delight ', 8)">Add to Order</button>
+
+      </div>
+    </div>
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-1434916224-612x612.jpg" alt="Offer 4">
+  <div class="offer-info">
+    <h3>Family Meal Combo</h3>
+    <p>Enjoy 2 burgers, 2 drinks, and fries at a special family price.</p>
+    <span>$18</span>
+    <button class="offer-add-btn" onclick="addToOrder('Family Meal Combo', 18)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-1459715799-612x612.jpg" alt="Offer 5">
+  <div class="offer-info">
+    <h3>Weekend Pizza Deal</h3>
+    <p>Buy 1 large pizza and get the second one at half price.</p>
+    <span>$15</span>
+    <button class="offer-add-btn" onclick="addToOrder('Weekend Pizza Deal', 15)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Offer 6">
+  <div class="offer-info">
+    <h3>Healthy Salad Pack</h3>
+    <p>Two fresh salads + one free juice for a healthy choice.</p>
+    <span>$12</span>
+    <button class="offer-add-btn" onclick="addToOrder('Healthy Salad Pack', 12)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-497959594-612x612.jpg" alt="Offer 7">
+  <div class="offer-info">
+    <h3>Sweet Treat Bundle</h3>
+    <p>3 desserts of your choice with a 20% discount.</p>
+    <span>$10</span>
+    <button class="offer-add-btn" onclick="addToOrder('Sweet Treat Bundle', 10)">Add to Order</button>
+  </div>
+</div>
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-1434485894-612x612.jpg" alt="Family Pizza Deal">
+  <div class="offer-info">
+    <h3>Family Pizza Deal</h3>
+    <p>2 Large Pizzas + 4 Drinks at a discounted price.</p>
+    <span>$25</span>
+    <button class="offer-add-btn" onclick="addToOrder('Family Pizza Deal', 25)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-520134277-612x612 (1).jpg" alt="Burger Combo">
+  <div class="offer-info">
+    <h3>Burger Combo</h3>
+    <p>2 Burgers + Fries + 2 Soft Drinks.</p>
+    <span>$15</span>
+    <button class="offer-add-btn" onclick="addToOrder('Burger Combo', 15)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-96430985-612x612.jpg" alt="Breakfast Special">
+  <div class="offer-info">
+    <h3>Breakfast Special</h3>
+    <p>Enjoy pancakes, scrambled eggs, and coffee.</p>
+    <span>$9</span>
+    <button class="offer-add-btn" onclick="addToOrder('Breakfast Special', 9)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-576730586-612x612.jpg" alt="Chicken Bucket">
+  <div class="offer-info">
+    <h3>Chicken Bucket</h3>
+    <p>12 pieces of crispy fried chicken + 2 sides.</p>
+    <span>$20</span>
+    <button class="offer-add-btn" onclick="addToOrder('Chicken Bucket', 20)">Add to Order</button>
+  </div>
+</div>
+
+<div class="offer-card">
+  <img src= "C:\Users\MM\Desktop\projects\Restaurant web\istockphoto-465529983-612x612.jpg" alt="Sweet Treat Pack">
+  <div class="offer-info">
+    <h3>Sweet Treat Pack</h3>
+    <p>Brownies + Donuts + Cheesecake slice.</p>
+    <span>$12</span>
+    <button class="offer-add-btn" onclick="addToOrder('Sweet Treat Pack', 12)">Add to Order</button>
+  </div>
+</div>
+
+  </div>
+</section>
+<script>
+function addToOrder(name, price) {
+  let orders = JSON.parse(localStorage.getItem('orders')) || [];
+  orders.push({ name: name, price: price });
+  localStorage.setItem('orders', JSON.stringify(orders));
+  alert(name + " has been added to your orders!");
+}
+</script>
+
+
+
+<footer>
+  &copy; 2025 Saiko Restaurant. All rights reserved.
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
