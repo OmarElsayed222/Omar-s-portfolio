@@ -19,30 +19,58 @@ body {
 }
 
 /* Header */
+/* Header */
 header {
-  background: rgba(0,0,0,0.9);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* أزرق غامق - تركواز رمادي */
   color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* خط بسيط للفصل */
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #2196f3;
+  font-size: 1.8rem;
+  color: #fff; /* يخلي اللوجو أبيض */
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 header nav a {
-  color: #e0e0e0;
-  margin: 0 15px;
+  color: #f0f0f0;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  margin-left: 20px;
+  position: relative;   /* مهم عشان الـ ::after يتحدد بالنسبة للينك */
+  transition: color 0.3s ease;
 }
 
-header nav a:hover {
-  color: #2196f3;
+/* الخط المتحرك */
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;   /* المسافة تحت النص */
+  width: 0;
+  height: 2px;
+  background: #64ffda;  /* لون الخط */
+  transition: width 0.3s ease-in-out;
 }
+
+/* يظهر بس عند الهوفر */
+header nav a:hover {
+  color: #64ffda;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
 
 /* Sections */
 section {
@@ -52,11 +80,26 @@ section {
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #2196f3;
+  text-align: center;     /* يخلي العنوان في النص */
+  margin: 20px 0 30px;    /* مسافة فوق وتحت */
+  font-size: 2rem;        /* حجم مناسب */
+  font-weight: 600;       /* سمك واضح */
+  color: #2196f3;         /* أزرق أساسي */
+  position: relative;     /* عشان نضيف خط تحته */
 }
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;           /* تحت النص */
+  transform: translateX(-50%);
+  width: 60px;            /* عرض الخط */
+  height: 3px;            /* سُمك الخط */
+  background-color: #64ffda; /* لون متناسق */
+  border-radius: 2px;
+}
+
 
 /* About */
 #about {
@@ -126,22 +169,27 @@ h2 {
 }
 
 .btn {
-  display: block;               /* عشان margin:auto يشتغل */
-  width: fit-content;           /* يخليه بس بالحجم اللي محتاجه النص */
-  margin: 20px auto 0;          /* يوسّطه أفقياً */
-  padding: 10px 18px;           /* حجم الزرار */
-  font-size: 0.9rem;            /* حجم النص */
-  background: #2196f3;
-  color: #000;
-  border-radius: 8px;
-  text-decoration: none;
+  display: block;                /* عشان margin:auto يشتغل */
+  width: fit-content;            /* على قد النص */
+  margin: 20px auto 0;           /* وسطي الزرار */
+  padding: 12px 22px;            /* حجم مريح */
+  font-size: 1rem;               /* حجم أوضح */
+  font-weight: 600;              /* نص تقيل */
+  background: #2196f3;           /* الأزرق الأساسي */
+  color: #fff;                   /* النص أبيض عشان يبقى واضح */
+  border: none;                  /* شيل أي إطار */
+  border-radius: 8px;            /* زوايا ناعمة */
+  text-decoration: none;         /* شيل الخط */
   text-align: center;
-  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;               /* يد عند الهوفر */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-  background: #0d8ae0;
-  transform: translateY(-3px);
+  background: #0d8ae0;           /* أزرق أغمق عند الهوفر */
+  transform: translateY(-3px);   /* يطلع لفوق شوية */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); /* ظل أكبر */
 }
 
 
@@ -659,6 +707,7 @@ footer {
 .close:hover {
   color: #2196f3;
 }
+
   </style>
 </head>
 <body>
