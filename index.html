@@ -99,6 +99,39 @@ h2::after {
   background-color: #64ffda; /* لون متناسق */
   border-radius: 2px;
 }
+/* الكود اللي عندك زي ما هو فوق */
+
+/* هنا الجزء المسؤول عن الريسبونسف */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;   /* يخلي العناصر عمودي */
+    align-items: center;      /* يوسطن العناصر */
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;  /* يصغر العنوان */
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;  /* اللينكات تبقى تحت بعض */
+    align-items: center;
+    gap: 10px;               /* مسافة بين اللينكات */
+    margin-top: 10px;
+  }
+
+  header nav a {
+    margin: 0;               /* يشيل المسافة اليمين */
+    font-size: 1rem;         /* خط أصغر شوية */
+  }
+
+  header nav a::after {
+    bottom: -2px;   /* يقلل المسافة تحت النص عشان يناسب الموبايل */
+  }
+}
+
 
 
 /* About */
